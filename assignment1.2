@@ -1,0 +1,35 @@
+public class ResultofExpressions {
+
+	public static void main(String[] args) {
+		int a = 20;
+		int b = 10;
+		int c, d, e;
+
+		b = a-- - --a;   
+		System.out.println(b);  
+    /*initially value of a is  20,when it is post decremented by 1 i.e a--, now a = 19
+    again stored value of a is pre decremented by 1 i.e --a, now a = 18
+    so value of b is, b = 20-18 = 2*/
+		
+		c = a--;
+		System.out.println(c);
+    /*c value is 18 because value of a will be stored as 18 before post decremented*/
+		
+		d = a >> 2;
+		System.out.println(d);
+    /* value of d = 4 because stored value of a is 18 ( 10010 in binary) when it is right shifted by 2, value of d will become 4(00100)*/
+		
+		e = a & b;
+		System.out.println(e);
+    /* value of e = 0 because
+    a = 4  b = 10
+    i.e 0100 & 1010 = 0;*/
+	}
+
+}
+
+output
+2
+18
+4
+0
